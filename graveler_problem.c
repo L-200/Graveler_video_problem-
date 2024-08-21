@@ -7,12 +7,12 @@ int main () {
     clock_t start_time = clock();
     struct timespec begin;
     int results[4] = {0, 0, 0, 0};
-    int rools = 0;
+    int rolls = 0;
     int i;
     int maxOnes = 0;
     srand(time(NULL));
     printf("Calculating!\n");
-    while (results[0] < 177 && rools <1000000000)
+    while (results[0] < 177 && rolls <1000000000)
     {
         for (i = 0; i <4; i++) {
             results[i] = 0;
@@ -25,12 +25,12 @@ int main () {
         if (results[0] > maxOnes) {
             maxOnes = results[0];
         }
-        rools++;
+        rolls++;
     }
     clock_t end_time = clock();
     double time_taken = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("Highest roll: %d\n", maxOnes);
-    printf("Number of rools: %d\n", rools);
+    printf("Number of rools: %d\n", rolls);
     printf("Time taken: %f seconds\n", time_taken);
     return 0;
 }
