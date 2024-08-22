@@ -19,7 +19,7 @@ int main () {
         }
         for (i = 0; i < 231; i++) {
             int roll = rand() % 4;  
-            results[roll]++;        //I need this for the specific type of answer EXPECTED, but there are faster ways to calculate the problemm shown in the video
+            results[roll]++;        
         }
         
         if (results[0] > maxOnes) {
