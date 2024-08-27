@@ -6,25 +6,25 @@
 int main () {
     clock_t start_time = clock();
     struct timespec begin;
-    int results[4] = {0, 0, 0, 0};
     int rolls = 0;
     int i;
+    int current_roll = 0;
     int maxOnes = 0;
     srand(time(NULL));
     printf("Calculating!\n");
-    while (results[0] < 177 && rolls <1000000000)
+    while (current_roll < 177 && rolls <1000000000)
     {
-        for (i = 0; i <4; i++) {
-            results[i] = 0;
-        }
         for (i = 0; i < 231; i++) {
             int roll = rand() % 4;  
-            results[roll]++;        
+            if (roll == 0) {
+            current_roll++; 
+            }       
         }
         
-        if (results[0] > maxOnes) {
-            maxOnes = results[0];
+        if (current_roll > maxOnes) {
+            maxOnes = current_roll;
         }
+        current_roll = 0;
         rolls++;
     }
     clock_t end_time = clock();
