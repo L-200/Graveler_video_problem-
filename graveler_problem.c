@@ -12,7 +12,7 @@ int main () {
     int maxOnes = 0;
     srand(time(NULL));
     printf("Calculating!\n");
-    while (current_roll < 177 && rolls <1000000000)
+    while (current_roll < 177 && rolls <100000000)
     {
         for (i = 0; i < 231; i++) {
             int roll = rand() % 4;  
